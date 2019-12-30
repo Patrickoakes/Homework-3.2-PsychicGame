@@ -13,62 +13,49 @@
 
 <body>
 
-    <!----<div class="container">                                                            ---> -->
-    -->
-    <!----    <div class="jumbotron">                                                                    -->
-    <!----        <h1>THE PSYCHIC GAME!!!</h1>-->
-    <!----        <img src="assets\images\psychic.jpg" alt="">-->
-    <!----    </div>-->
-    <!----    <p><strong>-->
-    <!----            <h2>GUESS WHAT LETTER I'M THINKING OF</h2>-->
-    <!----        </strong></p>-->
-    <!----    <p><strong>Wins:</strong></p><span id="winCount"></span>-->
-    <!----    <p><strong>Losses:</strong></p><span id="lossCount"></span>-->
-    <!----    <p><strong>Guesses Left:</strong></p><span id="guessLeft"></span>-->
-    <!----    <p><strong>Your guesses so far:</strong></p><span id="guessCount"></span>-->
-    <h1>HTML DOM insertAdjacentHTML() Method</h1>-->
-    -->
-    <p>This method inserts a specified text as HTML, into a specified position in the document.</p>-->
+    <div class="container">
+        <div class="jumbotron">
+            <h1>THE PSYCHIC GAME!!!</h1>
+            <img src="assets\images\psychic.jpg" alt="">
+        </div>
+        <p><strong>
+                <h2>GUESS WHAT LETTER I'M THINKING OF</h2>
+            </strong></p>
+        <p><strong>Wins:</strong></p><span id="winCount"></span>
+        <p><strong>Losses:</strong></p><span id="lossCount"></span>
+        <p><strong>Guesses Left:</strong></p><span id="guessLeft"></span>
+        <p><strong>Your guesses so far:</strong></p><span id="guessCount"></span>
 
-    <span id="myH2">My Header</span>
-
-    <script>
-
-        var h = document.getElementById("myH2");
-        h.insertAdjacentHTML("afterend", "<span>My new paragraph</span>");
-
-    </script>
+        <button onclick="myFunction()"> Try it </button><span class="example"></span>
 
 
+        <script>
+
+            var guesses = 8
 
 
-
-    <script>
-
-        // document.querySelector("#guessLeft").textContent = "8";
-
-        var gLeft = document.querySelector("p.strong");
-        gLeft.insertAdjacentHTML("afterend", "#guessLeft").innerHTML = "8";
-
-
-        //var comChoice
-        //var guesses = 8
-        // var perChoice = //onkey//
-        // function(choice) {
-        //     Math.floor(Math.random() * 25 + 1);
-        //     return choice
-        // }
-        //console.log(choice)
+            var comChoice = Math.floor(Math.random() * 25 + 1);
+            var Letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', ' k', 'l', 'm', ' n', ' o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+            function psychicFunction(comChoice, Letters) {
+                var comChoice = Math.floor(Math.random() * 25 + 1);
+                console.log(Letters[comChoice]);
+            }
+            console.log(Letters[comChoice]);
+            //var Letters
+            //
+            // var perChoice = //onkey//
+            // function(choice) {
+            //     Math.floor(Math.random() * 25 + 1);
+            //     return choice
+            // }
+            //console.log(choice)
 
 
 
-//    <button onclick="myFunction()">Try it</button>
-//
-//<script>
-//function myFunction() {
-//  document.querySelector(".example").style.backgroundColor = "red";
-//}
-    </script>
+            function myFunction() {
+                document.querySelector(".example").innerHTML = "Hello World";
+            }
+        </script>
 
 
 
@@ -80,7 +67,7 @@
 
 
 
-    </script>
+        </script>
 </body>
 
 </html>
