@@ -23,34 +23,37 @@
             </strong></p>
         <p><strong>Wins:</strong></p><span id="winCount"></span>
         <p><strong>Losses:</strong></p><span id="lossCount"></span>
-        <p><strong>Guesses Left:</strong></p><span id="guessLeft"></span>
-        <p><strong>Your guesses so far:</strong></p><span id="guessCount"></span>
+        <p><strong>Guesses Left:</strong></span><span id="guessLeft"></span></p>
+        <p><strong>Your guesses so far:</strong><span id="guessCount"></span></p>
 
         <button onclick="myFunction()"> Try it </button><span class="example"></span>
 
 
+
         <script>
+            var Letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', ' k', 'l', 'm', ' n', ' o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+            var i = i < Letters.length;
+            var a = document.onkeyup;
+            document.addEventListener('keyup', logKey);
+            const log = document.getElementById('guessCount');
+
+
+
+            function logKey(e) {
+
+                log.textContent += `   ` + `${e.key}`;
+            }
+
+
 
             var guesses = 8
 
 
-            var comChoice = Math.floor(Math.random() * 25 + 1);
-            var Letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', ' k', 'l', 'm', ' n', ' o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
-            function psychicFunction(comChoice, Letters) {
-                var comChoice = Math.floor(Math.random() * 25 + 1);
-                console.log(Letters[comChoice]);
-            }
-            console.log(Letters[comChoice]);
+
+
             //var Letters
             //
             // var perChoice = //onkey//
-            // function(choice) {
-            //     Math.floor(Math.random() * 25 + 1);
-            //     return choice
-            // }
-            //console.log(choice)
-
-
 
             function myFunction() {
                 document.querySelector(".example").innerHTML = "Hello World";
@@ -58,16 +61,6 @@
         </script>
 
 
-
-
-
-
-
-
-
-
-
-        </script>
 </body>
 
 </html>
