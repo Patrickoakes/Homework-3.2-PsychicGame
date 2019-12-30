@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Psychic Game</title>
-    <script src="assets\javascript\games.js"></script>
+    <!--<script src="assets\javascript\games.js"></script>-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
@@ -26,38 +26,77 @@
         <p><strong>Guesses Left:</strong></span><span id="guessLeft"></span></p>
         <p><strong>Your guesses so far:</strong><span id="guessCount"></span></p>
 
-        <button onclick="myFunction()"> Try it </button><span class="example"></span>
+
 
 
 
         <script>
+            var comChoice = Math.floor(Math.random() * 25 + 1);
             var Letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', ' k', 'l', 'm', ' n', ' o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
-            var i = i < Letters.length;
-            var a = document.onkeyup;
+            //var guesses = event.key;
+            var guessesIndex = 0;
+            var guessesArr = ['', '', '', '', '', '', '', '', ''];
+            var winContainer = document.querySelector("winCount");
+            var lossContainer = document.querySelector("#lossCount");
+            var guessContainer = document.querySelector("#guessLeft");
+            //var log = document.getElementById('guessCount');
+
             document.addEventListener('keyup', logKey);
             const log = document.getElementById('guessCount');
-
-
-
             function logKey(e) {
 
-                log.textContent += `   ` + `${e.key}`;
+                log.textContent += `${e.key}`;
             }
 
+            /*   function myIndex() {
+   
+                   if (guessesIndex < guessesArr.length) {
+                       lossContainer.innerHTML = guesses[guessesindex].guesses;
+                   }
+                   // If there aren't, render the end game screen.
+                   else {
+                       lossContainer.innerHTML = "Game Over!";
+                       winContainer.innerHTML = "Final Score: " + score + " out of " + questions.length;
+                   }
+               }
+               // Function that updates the score...
+               function updateScore() {
+                   winContainer.innerHTML = "Score: " + score;
+               }*/
+            /////////MAIN PROCESS/////////////
+            //function myIndex();
+            //function updateScore();
+            /* document.addEventListener('keyup', event.key);
+             document.onkeyup = function (event) {
+ 
+                 // If there are no more questions, stop the function.
+                 if (guessesIndex === guessesArr.length) {
+                     return;
+                 }
+ 
+                 var guesses = event.key;
+ 
+                 if (guesses === Letters) {
+                     log.textcontent = `${event.key};
+                 }
+ 
+             }*/
 
 
-            var guesses = 8
 
 
 
 
-            //var Letters
-            //
-            // var perChoice = //onkey//
 
-            function myFunction() {
-                document.querySelector(".example").innerHTML = "Hello World";
+
+
+            function psychicFunction(comChoice, Letters) {
+                var comChoice = Math.floor(Math.random() * 25 + 1);
+                console.log(Letters[comChoice]);
             }
+            console.log(Letters[comChoice]);
+
+
         </script>
 
 
