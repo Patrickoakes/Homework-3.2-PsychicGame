@@ -8,3 +8,9 @@ var comChoice = Math.floor(Math.random() * 25 + 1);
                 console.log(Letters[comChoice]);
             }
             console.log(Letters[comChoice]);
+
+            document.addEventListener('keyup', logKey);
+            function logKey(e) {
+
+                log.textContent += `${e.key}`;
+            }
