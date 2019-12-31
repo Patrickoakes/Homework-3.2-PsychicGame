@@ -18,14 +18,13 @@
             <h1>THE PSYCHIC GAME!!!</h1>
             <img src="assets\images\psychic.jpg" alt="">
         </div>
-        <p>Guess what letter I'm thinking of</p>
+        <p><strong>
+                <h2> Guess what letter I'm thinking of</h2>
+        </p></strong>
         <p>Wins: <span id="wins">0</span></p>
         <p>Losses: <span id="losses">0</span></p>
         <p>Guesses Left: <span id="guesses-left"></span></p>
         <p>Your Guesses so far: <span id="guesses-so-far"></span></p>
-
-
-
 
         <script>
 
@@ -54,17 +53,24 @@
 
 
             // Below we created three functions to updateGuesses, updateGuessesLeft, and updateGuessesSoFar
+
             var updateGuessesLeft = function () {
                 // Here we are grabbing the HTML element and setting it equal to the guessesLeft.
                 // (i.e. guessesLeft will get displayed in HTML)
                 document.querySelector("#guesses-left").innerHTML = guessesLeft;
             };
+            /////////////////////////////////////////////////////////////////////////////////////////////
+
 
             var updateLetterToGuess = function () {
                 // Here we get a random letterToGuess and assign it based on a random generator (only looking at a, b, or c)
                 letterToGuess = letters[Math.floor(Math.random() * letters.length)];
             };
 
+
+
+
+            ////////////////////////////////////////////////////////////////////////////////////////////////         
             var updateGuessesSoFar = function () {
                 // Here we take the guesses the user has tried -- then display it as letters separated by commas.
                 document.querySelector("#guesses-so-far").innerHTML = guessedLetters.join(", ");
