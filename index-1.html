@@ -5,9 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Psychic Game</title>
     <!--<script src="assets\javascript\games.js"></script>-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -23,7 +20,6 @@
         </div>
         <p>Guess what letter I'm thinking of</p>
         <p>Wins: <span id="wins">0</span></p>
-
         <p>Losses: <span id="losses">0</span></p>
         <p>Guesses Left: <span id="guesses-left"></span></p>
         <p>Your Guesses so far: <span id="guesses-so-far"></span></p>
@@ -31,18 +27,6 @@
 
 
 
-        <!-- <p>Guess what letter I'm thinking of</p>
-
- This is where we will have the win counter in HTML. It initially shows 0  
-<p>Wins: <span id="wins">0</span></p>
-
-<!-- This is where we will have the loss counter in HTML. It initially shows 0 
-<p>Losses: <span id="losses">0</span></p>
-
-<!-- This is where we will post the guessesLeft. Initially nothing is shown.
-
-<!-- This is where we will post the guessesSoFar. Initially nothing is shown. 
-<p>Your Guesses so far: <span id="guesses-so-far"></span></p>   -->
         <script>
 
 
@@ -60,6 +44,14 @@
             // This is the counter for wins/losses
             var wins = 0;
             var losses = 0;
+
+
+            //////////////////////////////////////////////////////////////////
+
+
+
+
+
 
             // Below we created three functions to updateGuesses, updateGuessesLeft, and updateGuessesSoFar
             var updateGuessesLeft = function () {
@@ -106,7 +98,7 @@
                 updateGuessesLeft();
                 updateGuessesSoFar();
 
-
+                ///////////////////////////////////////////////////////////////
                 // We'll check if there's a match.
                 if (letter === letterToGuess) {
 

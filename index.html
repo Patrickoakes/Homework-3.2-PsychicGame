@@ -9,6 +9,7 @@
     <!--<script src="assets\javascript\games.js"></script>-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
 </head>
 
 <body>
@@ -26,26 +27,32 @@
         <p><strong>Guesses Left:</strong></span><span id="guessLeft"></span></p>
         <p><strong>Your guesses so far:</strong><span id="guessCount"></span></p>
 
-
-
-
-
         <script>
+
+
             var userGuess = e.key
+
+
             var wins = 0;
+
+
             var losses = 0;
+
+
             var comChoice = Math.floor(Math.random() * 25 + 1);
+
+
             var letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', ' k', 'l', 'm', ' n', ' o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
             var letIndex = 0;
-            var guessesIndex = 0;
+
             var guessesArr = ['', '', '', '', '', '', '', '', ''];
+            ////////////////////////////////////// Turn var anything function () {}
+            //these went inside functions////
             var winContainer = document.querySelector("winCount");
             var lossContainer = document.querySelector("#lossCount");
             var guessContainer = document.querySelector("#guessLeft");
             const log = document.getElementById('guessCount');
-
-            ///// CODE FOR LIMITING THE GUESSES TO 9 GUESSES//////
-
+            //////////////////////////////////////
             // for (guessesIndex = 0; guessesIndex < guessesArr.length; guessesIndex++) {
             if (guessesArr[guessesIndex] === letters[letIndex]) {
             } else (guessesIndex === guessesArr); {
@@ -58,6 +65,16 @@
                 if (userGuess === comChoice)
                     winContainer.innerHTML = wins; wins++; updateWin();
             }
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -81,7 +98,7 @@
 
                 }
             };
-
+            //////////////////////////////////////////////////////////////////////////
 
             function updateWin() {
                 if (userGuess === comChoice)
